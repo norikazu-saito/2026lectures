@@ -1,0 +1,29 @@
+// division number
+int n = atoi(ARGV[2]); // e.g. % freefem++ square.edp 10
+
+// triangulation
+mesh Th = square(n, n);
+
+// finite element space
+fespace Vh(Th, P1);
+Vh uh, vh;
+
+// external force
+func f = 2.0*pi*pi*sin(pi*x)*sin(pi*y);
+
+// solving FEM
+solve poisson(uh,vh) = int2d(Th)(dx(uh)*dx(vh) + dy(uh)*dy(vh)) 
+                     - int2d(Th)(f*vh) 
+                     + on(1,2,3,4,uh=0);
+
+// output
+ofstream tri("Th_square.csv");
+for(int i=0;i<Th.nt;i++){
+	tri << Th[i][0] << "," << Th[i][1] << "," << Th[i][2] << endl;
+}
+ofstream sol("uh_square.csv");
+for(int i=0;i<Th.nv;i++){
+	sol << Th(i).x << "," << Th(i).y << "," << uh[][i] << endl;
+}
+plot(Th, wait=1);
+plot(uh, wait=1, fill=true, value=true, dim=3);

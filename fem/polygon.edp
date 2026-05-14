@@ -1,0 +1,39 @@
+// division number
+int n = atoi(ARGV[2]); // e.g. % freefem++ polygon.edp 10
+
+// boundary
+border G1(t = 0, 2) {x = t; y = 0; label=1;}
+border G2(t = 0, 1) {x = 2; y = t; label=2;}
+border G3(t = 0, 3) {x = 2-t; y = 1; label=3;}
+border G4(t = 0, 1) {x = -1; y = 1-t; label=4;}
+border G5(t = 0, 1) {x = -1-t; y = 0; label=5;}
+border G6(t = 0, 1) {x = -2; y = -t; label=6;}
+border G7(t = 0, 2) {x = -2+t; y = -1; label=7;}
+border G8(t = 0, 1) {x = 0; y = -1+t; label=8;}
+
+// triangulation
+mesh Th = buildmesh(G1(2*n)+G2(n)+G3(3*n)+G4(n)+G5(n)+G6(n)+G7(2*n)+G8(n));
+
+// finite element space
+fespace Vh(Th, P1);
+Vh uh, vh;
+
+// external force
+func f = 5.0;
+
+// solving FEM
+solve poisson(uh,vh) = int2d(Th)(dx(uh)*dx(vh) + dy(uh)*dy(vh)) 
+                     - int2d(Th)(f*vh) 
+                     + on(1,2,3,4,5,6,7,8,uh=0);
+
+// output
+ofstream tri("Th_polygon.csv");
+for(int i=0;i<Th.nt;i++){
+	tri << Th[i][0] << "," << Th[i][1] << "," << Th[i][2] << endl;
+}
+ofstream sol("uh_polygon.csv");
+for(int i=0;i<Th.nv;i++){
+	sol << Th(i).x << "," << Th(i).y << "," << uh[][i] << endl;
+}
+plot(Th, wait=1);
+plot(uh, wait=1, fill=true, value=true, dim=3);
