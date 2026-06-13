@@ -1,4 +1,4 @@
-# 2026pde-lecture
+# 2026lectures
 Codes for lecture of numerical analysis of PDEs
 
 I will complete this README.md until summer.....
