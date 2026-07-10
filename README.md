@@ -23,5 +23,4 @@ Codes for Appendix A of [Introduction to Numerical Analysis for Partial Differen
 Codes for Appendix B of [Introduction to Numerical Analysis for Partial Differential Equations](https://researchmap.jp/multidatabases/multidatabase_contents/detail/290334/df90f1994901307d12e79584f01c0878?frame_id=477251)
 
 ## na
-2026年度Sセメスター計算数理I（東京大学理学部）・計算数理（東京大学教養学部）で示した数値計算例を作成したColabノートブック（Jupyter Notebook）2026na.ipynbを置きました。
-詳細は、[講義ノート](https://researchmap.jp/multidatabases/multidatabase_contents/detail/290334/ff2bd1e2fd3e14520cf4a549830e4e88?frame_id=477251)を参照してください。
+[数値解析入門](https://researchmap.jp/multidatabases/multidatabase_contents/detail/290334/ff2bd1e2fd3e14520cf4a549830e4e88?frame_id=477251)で利用したプログラムです．
