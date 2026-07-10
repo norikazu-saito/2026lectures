@@ -11,7 +11,8 @@ This page provides the computational programs used in the numerical analysis cou
 Using these examples, I explain that the FDMs designed to reproduce the fundamental properties of solutions to PDEs indeed possess desirable stability and convergence properties. I also show that, by making full use of functional analysis, the mathematical validity of FEMs as an approximation method can be clearly established.
 
 ### 数値解析入門
-様々な数学的な概念を，具体的に数値を計算するという立場から研究する分野を数値解析と言う． 本講義は，数値解析への入門を目的とし，大学1年および2年次に学んだ微分積分学や線形代数学に現れる諸問題，例えば，非線形方程式，固有値問題，定積分，常微分方程式，最適化（関数の最小化）などを，コンピュータを用いて数値的に解くための方法とその背後にある数学理論の解説を行う．[講義ノート](https://researchmap.jp/multidatabases/multidatabase_contents/detail/290334/ff2bd1e2fd3e14520cf4a549830e4e88?frame_id=477251)を共有する．
+この[ノート](https://researchmap.jp/multidatabases/multidatabase_contents/detail/290334/ff2bd1e2fd3e14520cf4a549830e4e88?frame_id=477251)は，2026 年度S セメスター「計算数理II（東京大学理学部）」，「数値解析学（東京大学大学院数理科学研究科）」の講義ノートである．この講義では，様々な数学的な概念を，具体的に数値を計算するという立場から研究する分野を数値解析と言う． 本講義は，数値解析への入門を目的とし，大学1年および2年次に学んだ微分積分学や線形代数学に現れる諸問題，例えば，非線形方程式，固有値問題，定積分，常微分方程式，最適化（関数の最小化）などを，コンピュータを用いて数値的に解くための方法とその背後にある数学理論の解説を行う．
+
 
 # プログラム
 
