@@ -7,6 +7,7 @@ This page provides the computational programs used in the numerical analysis cou
  is based on the lecture ``Numerical Analysis'' delivered in the Spring Semester 2026 at the Graduate School of Mathematical Sciences, The University of Tokyo. The aim of this course is to provide an introductory exposition of the numerical analysis of partial differential equations (PDEs). In particular, I focus on the following two topics:
  1. Finite difference method (FDM) for first-order nonlinear PDEs in space, such as nonlinear conservation laws and Hamilton--Jacobi equations; and
  2. Finite element method (FEM) for the Poisson equation in a two dimensional space region.
+
 Using these examples, I explain that the FDMs designed to reproduce the fundamental properties of solutions to PDEs indeed possess desirable stability and convergence properties. I also show that, by making full use of functional analysis, the mathematical validity of FEMs as an approximation method can be clearly established.
 
 ### 数値解析入門
